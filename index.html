@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Kanish Tuteja · AI Automation Consultant, Toronto</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="I build AI automations, agents and internal tools for small businesses, with human approval built in so nothing runs unchecked.">
+  <meta name="theme-color" content="#ECECEC">
+  <!-- When you buy a domain: replace https://kanishtuteja.github.io/ here, in og:url/og:image, robots.txt and sitemap.xml, and add a CNAME file -->
+  <link rel="canonical" href="https://kanishtuteja.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kanishtuteja.github.io/">
+  <meta property="og:title" content="Kanish Tuteja · AI Automation Consultant, Toronto">
+  <meta property="og:description" content="I build AI automations, agents and internal tools for small businesses, with human approval built in so nothing runs unchecked.">
+  <meta property="og:image" content="https://kanishtuteja.github.io/assets/kanish.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='%23ECECEC'%3EKT%3C/text%3E%3C/svg%3E">
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      // Show the intro only once per visit, and never under reduced motion
+      try {
+        if (!sessionStorage.getItem('introSeen') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          d.classList.add('intro');
+          sessionStorage.setItem('introSeen', '1');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts load without blocking first paint. Privacy option: swap fonts.googleapis.com for fonts.bunny.net. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="preload" as="image" href="assets/kanish.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to change the software we use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Usually not. I connect the tools you already have. If something needs replacing, I'll tell you in the audit, before you spend anything." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is our data safe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Automations only get the access they need, sensitive steps keep a human approval, and you own every account and workflow I build." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The audit is free. Most builds are a fixed price agreed before any work starts, typically starting around $2,000 for one or two workflows. Ongoing support is a simple monthly fee." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a build take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most first workflows go live in one to three weeks." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if something breaks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every workflow has monitoring and alerts, and I fix issues as part of ongoing support." }
+      }
+    ]
+  }
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="intro-screen" aria-hidden="true">
+    <p class="intro-name"><span>Kanish</span><span>Tuteja</span></p>
+  </div>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="wordmark" href="#top">Kanish Tuteja<sup>®</sup></a>
+
+      <div class="nav-panel" id="nav-panel">
+        <ul class="nav-links">
+          <li><a href="#services"><span class="arrow" aria-hidden="true">→</span><span data-i18n="nav.services">Services</span></a></li>
+          <li><a href="#how"><span class="arrow" aria-hidden="true">→</span><span data-i18n="nav.how">How it works</span></a></li>
+          <li><a href="#work"><span class="arrow" aria-hidden="true">→</span><span data-i18n="nav.work">Work</span></a></li>
+          <li><a href="#about"><span class="arrow" aria-hidden="true">→</span><span data-i18n="nav.about">About</span></a></li>
+          <li><a href="#faq"><span class="arrow" aria-hidden="true">→</span><span data-i18n="nav.faq">FAQ</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Language / Langue">
+          <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        </div>
+        <a class="btn btn-dark btn-sm hide-sm" data-link="booking" href="#" target="_blank" rel="noopener" data-i18n="cta.short">Book a free audit</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" data-i18n="nav.menu">Menu</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-meta">
+        <div>
+          <p class="label" data-i18n="meta.based">Based in</p>
+          <p>Toronto, Canada · <time class="clock" data-i18n-attr="aria-label:meta.clock" aria-label="Local time in Toronto">--:--</time></p>
+        </div>
+        <div class="hide-sm">
+          <p class="label" data-i18n="meta.focus">Focus</p>
+          <p data-i18n="meta.focusVal">AI automation</p>
+        </div>
+        <div class="meta-right">
+          <p class="label" data-i18n="meta.inquiries">For inquiries</p>
+          <p><button type="button" class="u-link contact-open" data-i18n="contact.open">Get in touch</button></p>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <span class="giant giant-k" aria-hidden="true">K</span>
+        <span class="giant giant-t" aria-hidden="true">T</span>
+
+        <p class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">AI AUTOMATION · TORONTO</p>
+
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="assets/kanish.jpg" alt="Portrait of Kanish Tuteja" data-i18n-attr="alt:hero.alt" width="800" height="800" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+
+        <h1 id="hero-title" class="display hero-title" data-i18n="hero.title">Take the repetitive admin off your team.</h1>
+
+        <div class="hero-bottom">
+          <p class="lead" data-i18n="hero.lead">I build AI automations, agents and internal tools for small businesses, with human approval built in so nothing runs unchecked.</p>
+          <div class="btn-row">
+            <a class="btn btn-dark" data-link="booking" href="#" target="_blank" rel="noopener">
+              <span data-i18n="hero.primary">Book a free Automation Audit</span> <span aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-line" href="#work" data-i18n="hero.secondary">See my work</a>
+          </div>
+          <p class="fine" data-i18n="hero.fine">Free 30-minute call. You get a one-page plan, no pitch deck.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The problem -->
+    <section class="section wrap" aria-labelledby="problem-title">
+      <div class="section-head">
+        <p class="label" data-i18n="problem.label">(01) The problem</p>
+        <h2 id="problem-title" class="display reveal" data-i18n="problem.title">Your team is losing hours to work a system could do.</h2>
+      </div>
+      <ol class="cols-3">
+        <li class="col-item reveal">
+          <span class="num" aria-hidden="true">01</span>
+          <h3 data-i18n="problem.1.t">Chasing documents</h3>
+          <p data-i18n="problem.1.d">Clients send things late, incomplete or to the wrong inbox, and someone follows up by hand.</p>
+        </li>
+        <li class="col-item reveal">
+          <span class="num" aria-hidden="true">02</span>
+          <h3 data-i18n="problem.2.t">Re-keying data</h3>
+          <p data-i18n="problem.2.d">The same information gets typed into email, spreadsheets, CRM and accounting software.</p>
+        </li>
+        <li class="col-item reveal">
+          <span class="num" aria-hidden="true">03</span>
+          <h3 data-i18n="problem.3.t">Rebuilding reports</h3>
+          <p data-i18n="problem.3.d">Every week or month, someone rebuilds the same report from scratch.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3. What I build -->
+    <section class="section wrap" id="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <p class="label" data-i18n="services.label">(02) Services</p>
+        <h2 id="services-title" class="display reveal" data-i18n="services.title">What I build</h2>
+      </div>
+      <ol class="rows">
+        <li class="row reveal">
+          <span class="num" aria-hidden="true">01</span>
+          <h3 data-i18n="services.1.t">Workflow automations</h3>
+          <p data-i18n="services.1.d">Connect your email, forms, spreadsheets, CRM and accounting tools so data moves on its own.</p>
+        </li>
+        <li class="row reveal">
+          <span class="num" aria-hidden="true">02</span>
+          <h3 data-i18n="services.2.t">AI agents and assistants</h3>
+          <p data-i18n="services.2.d">Tools that read, draft, classify and reason, using Claude, Gemini and OpenAI models, with memory and retrieval over your own documents.</p>
+        </li>
+        <li class="row reveal">
+          <span class="num" aria-hidden="true">03</span>
+          <h3 data-i18n="services.3.t">Internal tools and dashboards</h3>
+          <p data-i18n="services.3.d">Simple web apps your team actually uses, built on Firebase, Supabase and modern web stacks.</p>
+        </li>
+        <li class="row reveal">
+          <span class="num" aria-hidden="true">04</span>
+          <h3 data-i18n="services.4.t">Monitoring and alerts</h3>
+          <p data-i18n="services.4.d">Pipelines that watch your data, flag what changed and alert the right person.</p>
+        </li>
+        <li class="row reveal">
+          <span class="num" aria-hidden="true">05</span>
+          <h3 data-i18n="services.5.t">AI search visibility (AEO)</h3>
+          <p data-i18n="services.5.d">Help ChatGPT, Gemini and Perplexity understand and recommend your business.</p>
+        </li>
+      </ol>
+      <p class="note reveal" data-i18n="services.note">Common first projects: client document intake, invoice and payment reminders, data entry between systems, recurring reports, inbox triage, onboarding checklists.</p>
+    </section>
+
+    <!-- 4. How it works -->
+    <section class="section wrap" id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <p class="label" data-i18n="how.label">(03) Process</p>
+        <h2 id="how-title" class="display reveal" data-i18n="nav.how">How it works</h2>
+      </div>
+      <ol class="cols-3">
+        <li class="col-item reveal">
+          <span class="num" aria-hidden="true">01</span>
+          <h3 data-i18n="how.1.t">Free Automation Audit</h3>
+          <p data-i18n="how.1.d">A 30-minute call to map where your team's hours go. You get a one-page plan showing what's worth automating and what isn't.</p>
+        </li>
+        <li class="col-item reveal">
+          <span class="num" aria-hidden="true">02</span>
+          <h3 data-i18n="how.2.t">Build</h3>
+          <p data-i18n="how.2.d">I build one or two workflows that save real hours, with human approval wherever it matters. Fixed scope, fixed price.</p>
+        </li>
+        <li class="col-item reveal">
+          <span class="num" aria-hidden="true">03</span>
+          <h3 data-i18n="how.3.t">Monitor and support</h3>
+          <p data-i18n="how.3.d">Documentation, monitoring and ongoing support, so you always know what's running and what it's doing.</p>
+        </li>
+      </ol>
+      <p class="callout reveal"><strong data-i18n="how.rule.k">My rule:</strong> <span data-i18n="how.rule">a broken automation is worse than none. Every system I build includes approval steps, logging and a clear way to turn it off.</span></p>
+    </section>
+
+    <!-- 5. Work -->
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="label" data-i18n="work.label">(04) Selected work</p>
+        <h2 id="work-title" class="display reveal" data-i18n="work.title">Things I've built</h2>
+      </div>
+      <ol class="projects">
+        <li class="project reveal">
+          <div class="shot">
+            <span class="shot-badge" data-i18n="work.ill">Illustration</span>
+            <svg class="anim anim-tp" viewBox="0 0 640 400" role="img" aria-label="Illustration: a position turns red and an alert fires when the capex signal falls below the thesis level" data-i18n-attr="aria-label:work.1.alt">
+              <rect width="640" height="400" class="a-bg"/>
+              <text x="32" y="44" class="t-label" data-i18n="ill.tp.title">POSITION PULSE</text>
+              <line x1="32" y1="58" x2="608" y2="58" class="a-rule"/>
+
+              <g transform="translate(32 72)">
+                <rect width="576" height="52" rx="4" class="a-row"/>
+                <circle cx="24" cy="26" r="7" class="tp-dot1"/>
+                <text x="44" y="31" class="t-strong">NVDA</text>
+                <text x="112" y="31" class="t-muted" data-i18n="ill.tp.r1">Data center capex</text>
+                <text x="556" y="31" text-anchor="end" class="t-status tp-hold" data-i18n="ill.tp.hold">Holding</text>
+                <text x="556" y="31" text-anchor="end" class="t-status t-red tp-broke" data-i18n="ill.tp.broke">Thesis broken</text>
+              </g>
+              <g transform="translate(32 132)">
+                <rect width="576" height="52" rx="4" class="a-row"/>
+                <circle cx="24" cy="26" r="7" class="a-green"/>
+                <text x="44" y="31" class="t-strong">XLE</text>
+                <text x="112" y="31" class="t-muted" data-i18n="ill.tp.r2">Oil supply tightening</text>
+                <text x="556" y="31" text-anchor="end" class="t-status" data-i18n="ill.tp.hold">Holding</text>
+              </g>
+              <g transform="translate(32 192)">
+                <rect width="576" height="52" rx="4" class="a-row"/>
+                <circle cx="24" cy="26" r="7" class="a-amber"/>
+                <text x="44" y="31" class="t-strong">SPY</text>
+                <text x="112" y="31" class="t-muted" data-i18n="ill.tp.r3">Macro weakening</text>
+                <text x="556" y="31" text-anchor="end" class="t-status" data-i18n="ill.tp.watch">Watching</text>
+              </g>
+
+              <g transform="translate(32 276)">
+                <text x="0" y="0" class="t-label" data-i18n="ill.tp.signal">CAPEX GUIDANCE</text>
+                <line x1="0" y1="64" x2="300" y2="64" class="a-thresh"/>
+                <text x="300" y="58" text-anchor="end" class="t-tiny t-red" data-i18n="ill.tp.level">thesis level</text>
+                <polyline points="0,34 40,30 80,36 120,28 160,32 200,44 240,56 270,78 300,92" pathLength="1" class="tp-line"/>
+                <circle cx="251" cy="64" r="5" class="tp-cross"/>
+              </g>
+
+              <g class="tp-alert">
+                <rect x="360" y="262" width="248" height="110" rx="4" class="a-card-red"/>
+                <text x="380" y="290" class="t-label t-red" data-i18n="ill.tp.alert">ALERT · NVDA</text>
+                <text x="380" y="318" class="t-big" data-i18n="ill.tp.a1">Capex guidance cut</text>
+                <text x="380" y="340" class="t-muted" data-i18n="ill.tp.a2">Below your thesis level.</text>
+                <text x="380" y="360" class="t-tiny t-link" data-i18n="ill.tp.src">Source ↗</text>
+              </g>
+            </svg>
+          </div>
+          <p class="tag" data-i18n="work.1.tag">Product concept · In validation</p>
+          <h3>Thesis Pulse</h3>
+          <p data-i18n="work.1.d">A background agent that watches open positions and flags the moment the reason behind a trade stops holding. It turns a one-line thesis into signals to monitor, then sends a single alert with the source. Currently in design and validation.</p>
+        </li>
+        <li class="project reveal">
+          <div class="shot"><img src="assets/work-unfiltered-weekly.jpg" alt="Unfiltered Weekly newsletter issue produced by the pipeline" data-i18n-attr="alt:work.2.alt" width="1280" height="800" loading="lazy" decoding="async"></div>
+          <p class="tag" data-i18n="work.2.tag">End-to-end automation</p>
+          <h3>Unfiltered Weekly</h3>
+          <p data-i18n="work.2.d">A fully automated content pipeline that scans sources, drafts with Claude and publishes only after a single approval tap. Built with Make.com, Zapier, Claude API and Buffer.</p>
+        </li>
+        <li class="project reveal">
+          <div class="shot">
+            <span class="shot-badge" data-i18n="work.ill">Illustration</span>
+            <svg class="anim anim-dx" viewBox="0 0 640 400" role="img" aria-label="Illustration: Dexter spots motion on camera, describes the scene, writes to its observation log and adds a memory" data-i18n-attr="aria-label:work.3.alt">
+              <rect width="640" height="400" class="a-bg"/>
+
+              <rect x="32" y="32" width="352" height="228" rx="4" class="a-panel"/>
+              <text x="48" y="56" class="t-label">CAM</text>
+              <text x="368" y="56" text-anchor="end" class="t-label t-red dx-motion" data-i18n="ill.dx.motion">MOTION</text>
+              <g class="a-sketch">
+                <line x1="56" y1="230" x2="360" y2="230"/>
+                <rect x="96" y="146" width="112" height="72" rx="3"/>
+                <polygon points="86,218 218,218 230,230 74,230"/>
+                <path d="M266 182 h38 l-4 44 h-30 z"/>
+                <path d="M304 192 q16 0 16 13 q0 13 -16 13"/>
+                <path class="dx-steam" d="M278 172 q-6 -10 0 -18 q6 -8 0 -18 M292 172 q-6 -10 0 -18 q6 -8 0 -18"/>
+              </g>
+              <rect x="252" y="140" width="80" height="98" class="dx-box"/>
+
+              <g transform="translate(32 280)">
+                <g class="dx-c1"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.see">SEE</text></g>
+                <text x="113" y="21" text-anchor="middle" class="t-muted">→</text>
+                <g class="dx-c2" transform="translate(126 0)"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.think">THINK</text></g>
+                <text x="239" y="21" text-anchor="middle" class="t-muted">→</text>
+                <g class="dx-c3" transform="translate(252 0)"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.remember">REMEMBER</text></g>
+              </g>
+
+              <text x="32" y="362" class="t-label" data-i18n="ill.dx.memory">MEMORY</text>
+              <g class="a-graph">
+                <line x1="130" y1="356" x2="180" y2="340"/><line x1="180" y1="340" x2="232" y2="366"/>
+                <line x1="232" y1="366" x2="286" y2="344"/><line x1="180" y1="340" x2="286" y2="344"/>
+                <line class="dx-link" x1="286" y1="344" x2="352" y2="362"/>
+                <circle cx="130" cy="356" r="5"/><circle cx="180" cy="340" r="5"/><circle cx="232" cy="366" r="5"/><circle cx="286" cy="344" r="5"/>
+              </g>
+              <circle cx="352" cy="362" r="7" class="dx-node"/>
+
+              <rect x="408" y="32" width="200" height="336" rx="4" class="a-panel"/>
+              <text x="424" y="56" class="t-label" data-i18n="ill.dx.log">OBSERVATION LOG</text>
+              <line x1="424" y1="68" x2="592" y2="68" class="a-rule"/>
+              <g class="dx-e1">
+                <text x="424" y="96" class="t-tiny t-red">21:04</text>
+                <text x="424" y="116" class="t-body" data-i18n="ill.dx.l1a">Third coffee.</text>
+                <text x="424" y="134" class="t-muted" data-i18n="ill.dx.l1b">Pattern noted.</text>
+              </g>
+              <g class="dx-e2">
+                <text x="424" y="172" class="t-tiny t-red">21:06</text>
+                <text x="424" y="192" class="t-body" data-i18n="ill.dx.l2a">Laptop half closed.</text>
+                <text x="424" y="210" class="t-muted" data-i18n="ill.dx.l2b">Hesitation.</text>
+              </g>
+              <g class="dx-e3">
+                <text x="424" y="248" class="t-tiny t-red">21:07</text>
+                <text x="424" y="268" class="t-body" data-i18n="ill.dx.l3a">Recall: same hour,</text>
+                <text x="424" y="286" class="t-muted" data-i18n="ill.dx.l3b">yesterday.</text>
+              </g>
+            </svg>
+          </div>
+          <p class="tag" data-i18n="work.3.tag">AI agent · Long-term memory</p>
+          <h3>Dexter</h3>
+          <p data-i18n="work.3.d">A personal AI second brain that sees, reasons and remembers. Claude handles both vision and reasoning, a local vector memory (SQLite and ChromaDB) stores long-term context, and ElevenLabs gives it a voice.</p>
+        </li>
+        <li class="project reveal">
+          <div class="shot">
+            <span class="shot-badge" data-i18n="work.ill">Illustration</span>
+            <svg class="anim anim-cdi" viewBox="0 0 640 400" role="img" aria-label="Illustration: student finance documents are sorted into a tracker automatically, and the month-end report waits for human approval" data-i18n-attr="aria-label:work.4.alt">
+              <rect width="640" height="400" class="a-bg"/>
+              <text x="32" y="44" class="t-label" data-i18n="ill.cdi.title">MONTH-END · STUDENT FINANCE</text>
+              <line x1="32" y1="58" x2="608" y2="58" class="a-rule"/>
+
+              <text x="32" y="86" class="t-label" data-i18n="ill.cdi.inbox">INBOX</text>
+              <g class="cdi-d1">
+                <rect x="32" y="98" width="190" height="44" rx="4" class="a-row"/>
+                <path d="M48 108 h14 l6 6 v18 h-20 z" class="a-doc"/>
+                <text x="80" y="125" class="t-body" data-i18n="ill.cdi.d1">OSAP confirmation</text>
+              </g>
+              <g class="cdi-d2">
+                <rect x="32" y="152" width="190" height="44" rx="4" class="a-row"/>
+                <path d="M48 162 h14 l6 6 v18 h-20 z" class="a-doc"/>
+                <text x="80" y="179" class="t-body" data-i18n="ill.cdi.d2">Payment receipt</text>
+              </g>
+              <g class="cdi-d3">
+                <rect x="32" y="206" width="190" height="44" rx="4" class="a-row"/>
+                <path d="M48 216 h14 l6 6 v18 h-20 z" class="a-doc"/>
+                <text x="80" y="233" class="t-body" data-i18n="ill.cdi.d3">Funding letter</text>
+              </g>
+
+              <line x1="234" y1="174" x2="266" y2="174" class="a-arrow"/>
+              <polyline points="260,168 266,174 260,180" class="a-arrow"/>
+              <circle cx="234" cy="174" r="4" class="cdi-pulse"/>
+
+              <rect x="278" y="72" width="330" height="190" rx="4" class="a-panel"/>
+              <text x="294" y="96" class="t-label" data-i18n="ill.cdi.tracker">TRACKER</text>
+              <g class="t-tiny t-dim">
+                <text x="294" y="118" data-i18n="ill.cdi.file">File</text>
+                <text x="384" y="118" data-i18n="ill.cdi.type">Type</text>
+                <text x="592" y="118" text-anchor="end" data-i18n="ill.cdi.status">Status</text>
+              </g>
+              <line x1="294" y1="126" x2="592" y2="126" class="a-rule"/>
+              <g class="t-body">
+                <text x="294" y="150">A-1042</text><text x="384" y="150">OSAP</text>
+                <text x="294" y="182">A-1043</text><text x="384" y="182" data-i18n="ill.cdi.pay">Payment</text>
+                <text x="294" y="214">A-1044</text><text x="384" y="214" data-i18n="ill.cdi.fund">Funding</text>
+                <text x="294" y="246">A-1045</text><text x="384" y="246">OSAP</text>
+              </g>
+              <g class="t-status">
+                <text x="592" y="150" text-anchor="end" class="cdi-p1" data-i18n="ill.cdi.pending">Pending</text>
+                <text x="592" y="150" text-anchor="end" class="cdi-l1 t-white" data-i18n="ill.cdi.logged">Logged ✓</text>
+                <text x="592" y="182" text-anchor="end" class="cdi-p2" data-i18n="ill.cdi.pending">Pending</text>
+                <text x="592" y="182" text-anchor="end" class="cdi-l2 t-white" data-i18n="ill.cdi.logged">Logged ✓</text>
+                <text x="592" y="214" text-anchor="end" class="cdi-p3" data-i18n="ill.cdi.pending">Pending</text>
+                <text x="592" y="214" text-anchor="end" class="cdi-l3 t-white" data-i18n="ill.cdi.logged">Logged ✓</text>
+                <text x="592" y="246" text-anchor="end" class="cdi-p4" data-i18n="ill.cdi.pending">Pending</text>
+                <text x="592" y="246" text-anchor="end" class="cdi-l4 t-white" data-i18n="ill.cdi.logged">Logged ✓</text>
+              </g>
+
+              <text x="32" y="304" class="t-label" data-i18n="ill.cdi.report">MONTH-END REPORT</text>
+              <rect x="32" y="322" width="360" height="8" rx="4" class="a-track"/>
+              <rect x="32" y="322" width="360" height="8" rx="4" class="cdi-bar"/>
+              <text x="32" y="356" class="t-muted" data-i18n="ill.cdi.built">Built from the tracker. No re-keying.</text>
+
+              <g class="cdi-wait">
+                <rect x="420" y="306" width="188" height="44" rx="22" class="a-btn-line"/>
+                <text x="514" y="333" text-anchor="middle" class="t-chip t-red" data-i18n="ill.cdi.needs">Needs approval</text>
+              </g>
+              <g class="cdi-ok">
+                <rect x="420" y="306" width="188" height="44" rx="22" class="a-btn-fill"/>
+                <text x="514" y="333" text-anchor="middle" class="t-chip t-ink" data-i18n="ill.cdi.approved">Approved ✓</text>
+              </g>
+            </svg>
+          </div>
+          <p class="tag" data-i18n="work.4.tag">In production · Team scale</p>
+          <h3 data-i18n="work.4.t">Workplace automation at CDI College</h3>
+          <p data-i18n="work.4.d">Replaced manual month-end and tracking work for a student finance team with internal tools and automations the team used every day.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 6. About -->
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <div class="section-head">
+        <p class="label" data-i18n="about.label">(05) About</p>
+        <h2 id="about-title" class="display reveal" data-i18n="about.title">Hi, I'm Kanish.</h2>
+      </div>
+      <div class="about">
+        <div class="about-photo reveal">
+          <div class="photo-frame">
+            <img src="assets/kanish.jpg" alt="Kanish Tuteja" width="800" height="800" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="about-copy reveal">
+          <p data-i18n="about.p1">I spent two years in student finance at CDI College, handling OSAP, payments, funding documentation and month-end. Nobody hired me to automate anything. I did it because manual work was slowing my team down, and the tools I built became part of how the team worked every day.</p>
+          <p data-i18n="about.p2">Now I build the same kind of systems for small businesses in Toronto, especially accounting and bookkeeping firms, law offices, insurance and real estate brokerages, and clinics. I have a background in computer science and networking, and I understand the business side well enough to know what can't break.</p>
+          <p class="label" data-i18n="about.stack">Stack</p>
+          <ul class="chips">
+            <li>Make.com</li><li>Zapier</li><li>Claude</li><li>OpenAI</li><li>Gemini</li><li>Python</li><li>JavaScript</li><li>Firebase</li><li>Supabase</li><li>Vercel</li><li>HubSpot</li><li>Google Workspace</li><li>Microsoft 365</li>
+          </ul>
+          <a class="u-link about-link" data-link="linkedin" href="#" target="_blank" rel="noopener"><span data-i18n="about.link">Connect on LinkedIn</span> →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section wrap" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="label" data-i18n="faq.label">(06) Questions</p>
+        <h2 id="faq-title" class="display reveal" data-i18n="nav.faq">FAQ</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item">
+          <summary data-i18n="faq.1.q">Do I need to change the software we use?</summary>
+          <p data-i18n="faq.1.a">Usually not. I connect the tools you already have. If something needs replacing, I'll tell you in the audit, before you spend anything.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.2.q">Is our data safe?</summary>
+          <p data-i18n="faq.2.a">Automations only get the access they need, sensitive steps keep a human approval, and you own every account and workflow I build.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.3.q">How much does it cost?</summary>
+          <p data-i18n="faq.3.a">The audit is free. Most builds are a fixed price agreed before any work starts, typically starting around $2,000 for one or two workflows. Ongoing support is a simple monthly fee.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.4.q">How long does a build take?</summary>
+          <p data-i18n="faq.4.a">Most first workflows go live in one to three weeks.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.5.q">What if something breaks?</summary>
+          <p data-i18n="faq.5.a">Every workflow has monitoring and alerts, and I fix issues as part of ongoing support.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="cta wrap" aria-labelledby="cta-title">
+      <h2 id="cta-title" class="display cta-title" data-i18n="cta.title">Find out where your team's hours are going.</h2>
+      <p class="cta-text" data-i18n="cta.text">Book a free 30-minute Automation Audit. You'll leave with a one-page plan, whether or not we work together.</p>
+      <p>
+        <a class="cta-link" data-link="booking" href="#" target="_blank" rel="noopener"><span data-i18n="cta.short">Book a free audit</span> <span class="cta-arrow" aria-hidden="true">→</span></a>
+      </p>
+      <p class="cta-email"><span data-i18n="cta.or">Or email me at</span> <a class="u-link" data-link="email" data-show="email" href="#">Email</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>© <span id="year">2026</span> Kanish Tuteja · Toronto</p>
+    <ul class="footer-links">
+      <li><a data-link="email" href="#" data-i18n="footer.email">Email</a></li>
+      <li><a data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="#top" data-i18n="footer.top">Back to top ↑</a></li>
+    </ul>
+  </footer>
+
+  <!-- Contact pop-up -->
+  <dialog class="contact" aria-labelledby="contact-title">
+    <div class="contact-card">
+      <div class="contact-head">
+        <h2 id="contact-title" class="display" data-i18n="contact.title">Contact</h2>
+        <button type="button" class="contact-close" data-i18n="contact.close">Close ×</button>
+      </div>
+      <dl class="contact-list">
+        <div>
+          <dt class="label" data-i18n="footer.email">Email</dt>
+          <dd><a data-link="email" data-show="email" href="#">Email</a></dd>
+        </div>
+        <div>
+          <dt class="label">LinkedIn</dt>
+          <dd><a data-link="linkedin" data-show="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a></dd>
+        </div>
+        <div>
+          <dt class="label" data-i18n="contact.call">Free 30-minute call</dt>
+          <dd><a data-link="booking" href="#" target="_blank" rel="noopener"><span data-i18n="cta.short">Book a free audit</span> →</a></dd>
+        </div>
+      </dl>
+    </div>
+  </dialog>
+</body>
+</html>
