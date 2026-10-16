@@ -295,6 +295,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 
 .lead { font-size: 1.05rem; line-height: 1.5; max-width: 34rem; }
+.lead-more { margin-top: 10px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .fine { margin-top: 14px; font-size: 0.8125rem; color: var(--muted); }
 
@@ -371,6 +372,33 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .row:hover h3 { color: var(--red); transform: translateX(8px); }
 @media (min-width: 900px) {
   .row { grid-template-columns: 1fr 1.6fr 1.4fr; align-items: baseline; gap: 24px; padding: 32px 0; }
+}
+
+/* Featured service row */
+.row-feature { border-top: 2px solid var(--red); }
+.row-feature h3 { color: var(--red); }
+.row-meta { display: flex; align-items: baseline; gap: 14px; }
+.flag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.flag::before {
+  content: "";
+  display: inline-block;
+  width: 8px; height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.row-detail { display: grid; gap: 12px; max-width: 46ch; }
+.row .row-lead { color: var(--ink); font-weight: 600; font-size: 1.02rem; }
+.points { margin-top: 4px; border-bottom: 1px solid var(--line); }
+.points li { padding: 10px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+.points strong { color: var(--ink); font-weight: 600; }
+@media (min-width: 900px) {
+  .row-meta { flex-direction: column; gap: 10px; }
 }
 
 .note { margin-top: 24px; color: var(--muted); font-size: 0.875rem; max-width: 70ch; }
