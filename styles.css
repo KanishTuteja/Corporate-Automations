@@ -432,6 +432,37 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .project p:last-child { color: var(--muted); max-width: 52ch; }
 .project:hover h3 { color: var(--red); }
 .tag { font-size: 0.75rem; color: var(--muted); margin-top: 16px; }
+
+/* Case studies */
+.case { border-top: 1px solid var(--ink); padding-top: 20px; margin-bottom: 88px; }
+.case-head { display: grid; gap: 28px; margin-bottom: 40px; }
+.case-intro { display: grid; gap: 14px; align-content: start; }
+.case-intro .tag { margin-top: 0; }
+.case-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+.case-lead { font-size: 1.05rem; line-height: 1.5; max-width: 56ch; }
+.flow .row h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color .25s, transform .35s var(--ease);
+}
+.flow .row p { max-width: 60ch; }
+.flow .row:hover h4 { color: var(--red); transform: translateX(8px); }
+.case .callout { margin-top: 32px; }
+.more-label { margin-bottom: 20px; padding-top: 16px; border-top: 1px solid var(--ink); }
+@media (min-width: 900px) {
+  .case-head { grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: start; }
+  .flow .row { grid-template-columns: 1fr 1.6fr 2fr; }
+}
+@media (min-width: 1100px) { .projects-3 { grid-template-columns: repeat(3, 1fr); } }
 /* Empty screenshot slot — replace with an <img loading="lazy"> */
 .shot {
   aspect-ratio: 16 / 10;
@@ -504,8 +535,24 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .cdi-p1, .cdi-p2, .cdi-p3, .cdi-p4 { opacity: 0; }
 .cdi-bar { fill: #F2F2F2; }
 .cdi-wait { opacity: 0; }
+.fh-qa { opacity: 0; }
+.fh-s-lang { fill: #FF5A54; }
+.fh-ll { stroke: #FF5A54; stroke-width: 1.5; }
+.fh-ds { stroke-width: 1.5; }
+.fh-pa { fill: #FF5A54; opacity: 0; }
+.fh-pb { fill: #FF5A54; transform: translate(230px, 88px); }
 
 @media (prefers-reduced-motion: no-preference) {
+  /* Finance Hybrid AI */
+  .fh-qa { animation-name: fh-qa; }
+  .fh-qb { animation-name: fh-qb; }
+  .fh-pa { animation-name: fh-pa; }
+  .fh-pb { animation-name: fh-pb; }
+  .fh-s-math { animation-name: fh-math; }
+  .fh-s-lang { animation-name: fh-lang; }
+  .fh-ds { animation-name: fh-ds; }
+  .fh-ll { animation-name: fh-ll; }
+
   .js .anim * { animation-duration: 10s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.4, 0, .2, 1); animation-fill-mode: both; }
   .js .anim:not(.is-playing) * { animation-play-state: paused; }
 
@@ -546,6 +593,16 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .cdi-wait { animation-name: cdi-wait; }
   .cdi-ok { animation-name: cdi-ok; }
 }
+
+/* Finance Hybrid AI keyframes: question A (EN, quant) → DeepSeek-R1, then question B (FR, compliance) → Llama */
+@keyframes fh-qa { 0%, 46% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes fh-qb { 0%, 48% { opacity: 0; } 52%, 98% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes fh-pa { 0% { opacity: 0; transform: none; } 4% { opacity: 1; transform: none; } 14% { transform: translate(42px, 0); } 26% { transform: translate(182px, 0); } 36%, 44% { opacity: 1; transform: translate(230px, -58px); } 48%, 100% { opacity: 0; transform: translate(230px, -58px); } }
+@keyframes fh-pb { 0%, 50% { opacity: 0; transform: none; } 54% { opacity: 1; transform: none; } 64% { transform: translate(42px, 0); } 76% { transform: translate(182px, 0); } 86%, 94% { opacity: 1; transform: translate(230px, 88px); } 98%, 100% { opacity: 0; transform: translate(230px, 88px); } }
+@keyframes fh-math { 0%, 14% { fill: #9A9A9A; } 18%, 30% { fill: #FF5A54; } 34%, 100% { fill: #9A9A9A; } }
+@keyframes fh-lang { 0%, 64% { fill: #9A9A9A; } 68%, 80% { fill: #FF5A54; } 84%, 100% { fill: #9A9A9A; } }
+@keyframes fh-ds { 0%, 34% { stroke: transparent; } 38%, 46% { stroke: #FF5A54; } 50%, 100% { stroke: transparent; } }
+@keyframes fh-ll { 0%, 84% { stroke: transparent; } 88%, 96% { stroke: #FF5A54; } 100% { stroke: transparent; } }
 
 /* Thesis Pulse keyframes */
 @keyframes tp-draw { 0%, 5% { stroke-dashoffset: 1; } 50% { stroke-dashoffset: 0; } 92% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }

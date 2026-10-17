@@ -267,7 +267,184 @@
         <p class="label" data-i18n="work.label">(04) Selected work</p>
         <h2 id="work-title" class="display reveal" data-i18n="work.title">Things I've built</h2>
       </div>
-      <ol class="projects">
+
+      <!-- Case study: Finance Hybrid AI -->
+      <article class="case" aria-labelledby="case-fh-title">
+        <div class="case-head">
+          <div class="case-intro reveal">
+            <p class="label" data-i18n="case.label">Case study</p>
+            <p class="tag" data-i18n="fh.tag">Open-source models · Runs locally</p>
+            <h3 id="case-fh-title" class="case-title">Finance Hybrid AI</h3>
+            <p class="case-lead" data-i18n="fh.lead">A finance assistant that routes each question to the open-source model best suited to it, instead of forcing one model to do everything. DeepSeek-R1 handles heavy reasoning and quantitative work; Llama handles compliance, regulatory and bilingual (EN/FR) questions. Both run locally through Ollama, so no data leaves the machine.</p>
+            <ul class="chips">
+              <li>DeepSeek-R1</li><li>Llama 3.1</li><li>Ollama</li><li>Python</li><li>langdetect</li><li>pytest</li>
+            </ul>
+          </div>
+          <div class="shot reveal">
+            <span class="shot-badge" data-i18n="work.ill">Illustration</span>
+            <svg class="anim anim-fh" viewBox="0 0 640 400" role="img" aria-label="Illustration: an English forecasting question is routed to DeepSeek-R1 and a French compliance question to Llama, both running locally" data-i18n-attr="aria-label:fh.alt">
+              <rect width="640" height="400" class="a-bg"/>
+              <text x="32" y="44" class="t-label" data-i18n="ill.fh.title">ROUTING · ON YOUR HARDWARE</text>
+              <line x1="32" y1="58" x2="608" y2="58" class="a-rule"/>
+
+              <rect x="32" y="146" width="176" height="78" rx="4" class="a-row"/>
+              <text x="48" y="172" class="t-label" data-i18n="ill.fh.q">QUESTION</text>
+              <text x="48" y="200" class="t-body fh-qa">NPV at 8%, 5 years?</text>
+              <text x="48" y="200" class="t-body fh-qb">Exigences FINTRAC?</text>
+
+              <line x1="208" y1="185" x2="250" y2="185" class="a-arrow"/>
+              <rect x="250" y="128" width="140" height="114" rx="4" class="a-panel"/>
+              <text x="266" y="152" class="t-label" data-i18n="ill.fh.router">ROUTER</text>
+              <text x="266" y="178" class="t-muted fh-s-lang" data-i18n="ill.fh.lang">language</text>
+              <text x="266" y="200" class="t-muted" data-i18n="ill.fh.kw">keywords</text>
+              <text x="266" y="222" class="t-muted fh-s-math" data-i18n="ill.fh.math">math signals</text>
+
+              <path d="M390 185 C 414 185, 414 127, 438 127" class="a-arrow"/>
+              <path d="M390 185 C 414 185, 414 273, 438 273" class="a-arrow"/>
+
+              <rect x="438" y="92" width="170" height="70" rx="4" class="a-row fh-ds"/>
+              <text x="454" y="122" class="t-strong">DEEPSEEK-R1</text>
+              <text x="454" y="144" class="t-muted" data-i18n="ill.fh.ds">Reasoning · quant</text>
+
+              <rect x="438" y="238" width="170" height="70" rx="4" class="a-row fh-ll"/>
+              <text x="454" y="268" class="t-strong">LLAMA 3.1</text>
+              <text x="454" y="290" class="t-muted" data-i18n="ill.fh.ll">Compliance · EN/FR</text>
+
+              <circle cx="208" cy="185" r="6" class="fh-pa"/>
+              <circle cx="208" cy="185" r="6" class="fh-pb"/>
+
+              <line x1="32" y1="340" x2="608" y2="340" class="a-rule"/>
+              <path d="M38 360 h14 v12 h-14 z M41 360 v-4 a4 4 0 0 1 8 0 v4" class="a-doc"/>
+              <text x="64" y="371" class="t-muted" data-i18n="ill.fh.local">Runs locally through Ollama. No data leaves the machine.</text>
+            </svg>
+          </div>
+        </div>
+
+        <ol class="rows flow">
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">01</span>
+            <h4 data-i18n="fh.1.t">Task routing</h4>
+            <p data-i18n="fh.1.d">Every question passes through a router before any model sees it. It detects the language, scans curated keyword lists and spots quantitative signals like formulas and percentages, then sends the question to the right model. Each decision records the signals that drove it, so every route can be traced.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">02</span>
+            <h4 data-i18n="fh.2.t">One client for every model</h4>
+            <p data-i18n="fh.2.d">Both models run locally through Ollama behind a single client interface. Agents call one API and never need to know which model is answering, and model names live in configuration, so swapping a model doesn’t touch the agents.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">03</span>
+            <h4 data-i18n="fh.3.t">Finance agents</h4>
+            <p data-i18n="fh.3.d">Three specialized agents, each with its own system prompt: a Research Analyst for company and market briefs, a Compliance Agent for US and Canadian regulatory questions, and a Forecasting Agent for quantitative projections and scenarios.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">04</span>
+            <h4 data-i18n="fh.4.t">Bilingual EN/FR</h4>
+            <p data-i18n="fh.4.d">The router detects French, with a fallback for short text, and sends it to Llama, which answers entirely in French using Canadian terms like REER and CELI. Built for a market where compliance work happens in both official languages.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">05</span>
+            <h4 data-i18n="fh.5.t">Evaluation harness</h4>
+            <p data-i18n="fh.5.d">A benchmark of finance tasks — quantitative, compliance, French, research and agent cases — runs through the full system. Each answer is scored on routing, language, required content, forbidden content and structure. In the latest run, all 13 cases passed.</p>
+          </li>
+        </ol>
+        <p class="callout reveal"><strong data-i18n="fh.why.k">Why two models:</strong> <span data-i18n="fh.why">one model rarely does everything well. Splitting the work by strength — reasoning to DeepSeek-R1, compliance and French to Llama — is what makes it hybrid, not two models bolted together.</span></p>
+      </article>
+
+      <!-- Case study: Dexter -->
+      <article class="case" aria-labelledby="case-dx-title">
+        <div class="case-head">
+          <div class="case-intro reveal">
+            <p class="label" data-i18n="case.label">Case study</p>
+            <p class="tag" data-i18n="work.3.tag">AI agent · Long-term memory</p>
+            <h3 id="case-dx-title" class="case-title">Dexter</h3>
+            <p class="case-lead" data-i18n="dx.lead">A real-time assistant that watches through a camera, reasons about what it sees with Sherlock-style deduction, and narrates its conclusions in a calm, clinical inner-monologue voice through earbuds. Built solo: a browser front end with a Python back end.</p>
+            <ul class="chips">
+              <li>Claude Sonnet</li><li>Claude Haiku</li><li>ElevenLabs</li><li>FastAPI</li><li>SQLite</li><li>ChromaDB</li><li>Python</li>
+            </ul>
+          </div>
+          <div class="shot reveal">
+            <span class="shot-badge" data-i18n="work.ill">Illustration</span>
+            <svg class="anim anim-dx" viewBox="0 0 640 400" role="img" aria-label="Illustration: Dexter spots motion on camera, describes the scene, writes to its observation log and adds a memory" data-i18n-attr="aria-label:work.3.alt">
+              <rect width="640" height="400" class="a-bg"/>
+
+              <rect x="32" y="32" width="352" height="228" rx="4" class="a-panel"/>
+              <text x="48" y="56" class="t-label">CAM</text>
+              <text x="368" y="56" text-anchor="end" class="t-label t-red dx-motion" data-i18n="ill.dx.motion">MOTION</text>
+              <g class="a-sketch">
+                <line x1="56" y1="230" x2="360" y2="230"/>
+                <rect x="96" y="146" width="112" height="72" rx="3"/>
+                <polygon points="86,218 218,218 230,230 74,230"/>
+                <path d="M266 182 h38 l-4 44 h-30 z"/>
+                <path d="M304 192 q16 0 16 13 q0 13 -16 13"/>
+                <path class="dx-steam" d="M278 172 q-6 -10 0 -18 q6 -8 0 -18 M292 172 q-6 -10 0 -18 q6 -8 0 -18"/>
+              </g>
+              <rect x="252" y="140" width="80" height="98" class="dx-box"/>
+
+              <g transform="translate(32 280)">
+                <g class="dx-c1"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.see">SEE</text></g>
+                <text x="113" y="21" text-anchor="middle" class="t-muted">→</text>
+                <g class="dx-c2" transform="translate(126 0)"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.think">THINK</text></g>
+                <text x="239" y="21" text-anchor="middle" class="t-muted">→</text>
+                <g class="dx-c3" transform="translate(252 0)"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.remember">REMEMBER</text></g>
+              </g>
+
+              <text x="32" y="362" class="t-label" data-i18n="ill.dx.memory">MEMORY</text>
+              <g class="a-graph">
+                <line x1="130" y1="356" x2="180" y2="340"/><line x1="180" y1="340" x2="232" y2="366"/>
+                <line x1="232" y1="366" x2="286" y2="344"/><line x1="180" y1="340" x2="286" y2="344"/>
+                <line class="dx-link" x1="286" y1="344" x2="352" y2="362"/>
+                <circle cx="130" cy="356" r="5"/><circle cx="180" cy="340" r="5"/><circle cx="232" cy="366" r="5"/><circle cx="286" cy="344" r="5"/>
+              </g>
+              <circle cx="352" cy="362" r="7" class="dx-node"/>
+
+              <rect x="408" y="32" width="200" height="336" rx="4" class="a-panel"/>
+              <text x="424" y="56" class="t-label" data-i18n="ill.dx.log">OBSERVATION LOG</text>
+              <line x1="424" y1="68" x2="592" y2="68" class="a-rule"/>
+              <g class="dx-e1">
+                <text x="424" y="96" class="t-tiny t-red">21:04</text>
+                <text x="424" y="116" class="t-body" data-i18n="ill.dx.l1a">Third coffee.</text>
+                <text x="424" y="134" class="t-muted" data-i18n="ill.dx.l1b">Pattern noted.</text>
+              </g>
+              <g class="dx-e2">
+                <text x="424" y="172" class="t-tiny t-red">21:06</text>
+                <text x="424" y="192" class="t-body" data-i18n="ill.dx.l2a">Laptop half closed.</text>
+                <text x="424" y="210" class="t-muted" data-i18n="ill.dx.l2b">Hesitation.</text>
+              </g>
+              <g class="dx-e3">
+                <text x="424" y="248" class="t-tiny t-red">21:07</text>
+                <text x="424" y="268" class="t-body" data-i18n="ill.dx.l3a">Recall: same hour,</text>
+                <text x="424" y="286" class="t-muted" data-i18n="ill.dx.l3b">yesterday.</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <ol class="rows flow">
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">01</span>
+            <h4 data-i18n="dx.1.t">Perception → deduction → voice</h4>
+            <p data-i18n="dx.1.d">Every 10 seconds the browser captures a camera frame, gated by motion so nothing is sent when nothing changes. A fast vision model (Claude Haiku) turns the frame into structured observations; Claude Sonnet then deduces — observation, pattern, interpretation, prediction — as a first-person monologue. ElevenLabs speaks it in a custom voice, and every observation lands in a timestamped log. The FastAPI back end proxies every API call, so keys never reach the browser.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">02</span>
+            <h4 data-i18n="dx.2.t">Memory-first storage</h4>
+            <p data-i18n="dx.2.d">Built before the live loop, because the shape of storage dictates everything downstream. Every observation is kept permanently: SQLite holds raw observations, transcripts and summaries, and ChromaDB holds vector embeddings for semantic search. Embeddings are generated locally by default, and a nightly job compresses each day into a summary. Raw memory stays on the machine; only prompts leave it.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">03</span>
+            <h4 data-i18n="dx.3.t">Strong recall</h4>
+            <p data-i18n="dx.3.d">Every cycle searches the full history, but Dexter only says a memory out loud when the match is strong and genuinely old — at least 10 minutes, so it’s recall, not continuity. Pinned memories get a lower bar and skip the age check, a cooldown stops repeats, and recalled entries get their own badge in the UI. Thresholds, age floor and cooldown are all tunable without touching code.</p>
+          </li>
+          <li class="row reveal">
+            <span class="num" aria-hidden="true">04</span>
+            <h4 data-i18n="dx.4.t">Build order</h4>
+            <p data-i18n="dx.4.d">Memory foundation first, then the voice prompt perfected in isolation against sample scenes, then the live loop plugged into the existing memory. Python over a faster-to-demo Node stack, because the memory layer is the heart of the system and keeps a fully local version within reach.</p>
+          </li>
+        </ol>
+      </article>
+
+      <p class="label more-label" data-i18n="work.more">More projects</p>
+      <ol class="projects projects-3">
         <li class="project reveal">
           <div class="shot">
             <span class="shot-badge" data-i18n="work.ill">Illustration</span>
@@ -325,66 +502,6 @@
           <p class="tag" data-i18n="work.2.tag">End-to-end automation</p>
           <h3>Unfiltered Weekly</h3>
           <p data-i18n="work.2.d">A fully automated content pipeline that scans sources, drafts with Claude and publishes only after a single approval tap. Built with Make.com, Zapier, Claude API and Buffer.</p>
-        </li>
-        <li class="project reveal">
-          <div class="shot">
-            <span class="shot-badge" data-i18n="work.ill">Illustration</span>
-            <svg class="anim anim-dx" viewBox="0 0 640 400" role="img" aria-label="Illustration: Dexter spots motion on camera, describes the scene, writes to its observation log and adds a memory" data-i18n-attr="aria-label:work.3.alt">
-              <rect width="640" height="400" class="a-bg"/>
-
-              <rect x="32" y="32" width="352" height="228" rx="4" class="a-panel"/>
-              <text x="48" y="56" class="t-label">CAM</text>
-              <text x="368" y="56" text-anchor="end" class="t-label t-red dx-motion" data-i18n="ill.dx.motion">MOTION</text>
-              <g class="a-sketch">
-                <line x1="56" y1="230" x2="360" y2="230"/>
-                <rect x="96" y="146" width="112" height="72" rx="3"/>
-                <polygon points="86,218 218,218 230,230 74,230"/>
-                <path d="M266 182 h38 l-4 44 h-30 z"/>
-                <path d="M304 192 q16 0 16 13 q0 13 -16 13"/>
-                <path class="dx-steam" d="M278 172 q-6 -10 0 -18 q6 -8 0 -18 M292 172 q-6 -10 0 -18 q6 -8 0 -18"/>
-              </g>
-              <rect x="252" y="140" width="80" height="98" class="dx-box"/>
-
-              <g transform="translate(32 280)">
-                <g class="dx-c1"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.see">SEE</text></g>
-                <text x="113" y="21" text-anchor="middle" class="t-muted">→</text>
-                <g class="dx-c2" transform="translate(126 0)"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.think">THINK</text></g>
-                <text x="239" y="21" text-anchor="middle" class="t-muted">→</text>
-                <g class="dx-c3" transform="translate(252 0)"><rect width="100" height="32" rx="16" class="a-chip"/><text x="50" y="21" text-anchor="middle" class="t-chip" data-i18n="ill.dx.remember">REMEMBER</text></g>
-              </g>
-
-              <text x="32" y="362" class="t-label" data-i18n="ill.dx.memory">MEMORY</text>
-              <g class="a-graph">
-                <line x1="130" y1="356" x2="180" y2="340"/><line x1="180" y1="340" x2="232" y2="366"/>
-                <line x1="232" y1="366" x2="286" y2="344"/><line x1="180" y1="340" x2="286" y2="344"/>
-                <line class="dx-link" x1="286" y1="344" x2="352" y2="362"/>
-                <circle cx="130" cy="356" r="5"/><circle cx="180" cy="340" r="5"/><circle cx="232" cy="366" r="5"/><circle cx="286" cy="344" r="5"/>
-              </g>
-              <circle cx="352" cy="362" r="7" class="dx-node"/>
-
-              <rect x="408" y="32" width="200" height="336" rx="4" class="a-panel"/>
-              <text x="424" y="56" class="t-label" data-i18n="ill.dx.log">OBSERVATION LOG</text>
-              <line x1="424" y1="68" x2="592" y2="68" class="a-rule"/>
-              <g class="dx-e1">
-                <text x="424" y="96" class="t-tiny t-red">21:04</text>
-                <text x="424" y="116" class="t-body" data-i18n="ill.dx.l1a">Third coffee.</text>
-                <text x="424" y="134" class="t-muted" data-i18n="ill.dx.l1b">Pattern noted.</text>
-              </g>
-              <g class="dx-e2">
-                <text x="424" y="172" class="t-tiny t-red">21:06</text>
-                <text x="424" y="192" class="t-body" data-i18n="ill.dx.l2a">Laptop half closed.</text>
-                <text x="424" y="210" class="t-muted" data-i18n="ill.dx.l2b">Hesitation.</text>
-              </g>
-              <g class="dx-e3">
-                <text x="424" y="248" class="t-tiny t-red">21:07</text>
-                <text x="424" y="268" class="t-body" data-i18n="ill.dx.l3a">Recall: same hour,</text>
-                <text x="424" y="286" class="t-muted" data-i18n="ill.dx.l3b">yesterday.</text>
-              </g>
-            </svg>
-          </div>
-          <p class="tag" data-i18n="work.3.tag">AI agent · Long-term memory</p>
-          <h3>Dexter</h3>
-          <p data-i18n="work.3.d">A personal AI second brain that sees, reasons and remembers. Claude handles both vision and reasoning, a local vector memory (SQLite and ChromaDB) stores long-term context, and ElevenLabs gives it a voice.</p>
         </li>
         <li class="project reveal">
           <div class="shot">
