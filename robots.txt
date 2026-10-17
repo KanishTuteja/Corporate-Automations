@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kanishtuteja.github.io/sitemap.xml
+Sitemap: https://kanishtuteja.github.io/Corporate-Automations/sitemap.xml
