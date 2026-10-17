@@ -13,8 +13,8 @@
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
 
-  --max: 1440px;
-  --gutter: 20px;
+  --max: none;
+  --gutter: clamp(20px, 3vw, 56px);
   --header-h: 60px;
   --ease: cubic-bezier(.2, .7, .2, 1);
 
@@ -59,7 +59,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
-@media (min-width: 768px) { :root { --gutter: 32px; } }
 
 .skip-link {
   position: absolute; left: 12px; top: -60px; z-index: 200;
@@ -255,7 +254,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 
 .hero-eyebrow { grid-area: eye; margin: 8px 0 14px; }
-.hero-title { grid-area: title; font-size: clamp(2.6rem, 11vw, 4.2rem); margin-bottom: 28px; }
+.hero-title { grid-area: title; font-size: clamp(2.1rem, 8.5vw, 3.2rem); margin-bottom: 28px; }
 .hero-photo { grid-area: photo; position: relative; z-index: 1; }
 .hero-bottom { grid-area: bottom; margin-top: 32px; }
 
@@ -265,7 +264,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   color: var(--white);
   line-height: 0.8;
   letter-spacing: -0.06em;
-  font-size: clamp(7rem, 32vw, 26rem);
+  font-size: clamp(6rem, 26vw, 16rem);
   user-select: none;
   pointer-events: none;
 }
@@ -294,7 +293,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   color: var(--muted);
 }
 
-.lead { font-size: 1.05rem; line-height: 1.5; max-width: 34rem; }
+.lead { font-size: 1rem; line-height: 1.5; max-width: 34rem; }
 .lead-more { margin-top: 10px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .fine { margin-top: 14px; font-size: 0.8125rem; color: var(--muted); }
@@ -307,7 +306,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .hero { min-height: calc(100svh - var(--header-h)); display: flex; flex-direction: column; padding-bottom: 40px; }
   .hero-stage {
     flex: 1;
-    grid-template-columns: 1fr minmax(280px, 26vw) 1fr;
+    grid-template-columns: 1fr minmax(260px, 22vw) 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "eye photo title"
@@ -316,18 +315,18 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
     column-gap: clamp(16px, 2vw, 40px);
   }
   .hero-eyebrow { align-self: start; margin: 0; }
-  .hero-title { align-self: start; font-size: clamp(2.4rem, 3.4vw, 3.6rem); margin: 0; }
+  .hero-title { align-self: start; font-size: clamp(1.9rem, 2.6vw, 3rem); margin: 0; }
   .hero-photo { align-self: center; justify-self: stretch; }
   .photo-frame { width: 100%; }
   .hero-bottom { align-self: end; margin: 0; }
-  .giant { font-size: clamp(14rem, 25vw, 28rem); }
+  .giant { font-size: clamp(10rem, 19vw, 24rem); }
   .giant-k { justify-self: start; }
   .giant-t { justify-self: end; }
 }
 
 /* ---------- Sections ---------- */
-.section { padding-block: 72px; }
-@media (min-width: 900px) { .section { padding-block: 112px; } }
+.section { padding-block: 64px; }
+@media (min-width: 900px) { .section { padding-block: 96px; } }
 
 .section-head {
   display: grid;
@@ -336,7 +335,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   padding-top: 16px;
   margin-bottom: 40px;
 }
-.section-head h2 { font-size: clamp(2.4rem, 7vw, 5rem); max-width: 18ch; }
+.section-head h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); max-width: 18ch; }
 
 @media (min-width: 900px) {
   .section-head { grid-template-columns: 1fr 3fr; margin-bottom: 64px; }
@@ -363,7 +362,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .row h3 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
   line-height: 1;
   text-transform: uppercase;
   transition: color .25s, transform .35s var(--ease);
@@ -371,7 +370,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .row p { color: var(--muted); max-width: 46ch; }
 .row:hover h3 { color: var(--red); transform: translateX(8px); }
 @media (min-width: 900px) {
-  .row { grid-template-columns: 1fr 1.6fr 1.4fr; align-items: baseline; gap: 24px; padding: 32px 0; }
+  .row { grid-template-columns: 1fr 1.6fr 1.4fr; align-items: baseline; gap: 24px; padding: 26px 0; }
 }
 
 /* Featured service row */
@@ -409,8 +408,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   margin-top: 48px;
   padding: 24px 0 0;
   border-top: 1px solid var(--ink);
-  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
-  line-height: 1.4;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.45;
   letter-spacing: -0.01em;
   max-width: 48ch;
 }
@@ -423,7 +422,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .project h3 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
   line-height: 1;
   text-transform: uppercase;
   margin: 6px 0 10px;
@@ -434,22 +433,22 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .tag { font-size: 0.75rem; color: var(--muted); margin-top: 16px; }
 
 /* Case studies */
-.case { border-top: 1px solid var(--ink); padding-top: 20px; margin-bottom: 88px; }
+.case { border-top: 1px solid var(--ink); padding-top: 20px; margin-bottom: 72px; }
 .case-head { display: grid; gap: 28px; margin-bottom: 40px; }
 .case-intro { display: grid; gap: 14px; align-content: start; }
 .case-intro .tag { margin-top: 0; }
 .case-title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
   line-height: 0.95;
   text-transform: uppercase;
 }
-.case-lead { font-size: 1.05rem; line-height: 1.5; max-width: 56ch; }
+.case-lead { font-size: 1rem; line-height: 1.5; max-width: 56ch; }
 .flow .row h4 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
   line-height: 1;
   text-transform: uppercase;
   transition: color .25s, transform .35s var(--ease);
@@ -692,8 +691,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 /* ---------- Closing CTA ---------- */
 .cta { padding-block: 72px 96px; border-top: 1px solid var(--ink); }
-.cta-title { font-size: clamp(2.4rem, 7vw, 5rem); max-width: 18ch; margin-top: 16px; }
-.cta-text { margin-top: 18px; font-size: 1.05rem; max-width: 46ch; }
+.cta-title { font-size: clamp(2rem, 4.4vw, 3.6rem); max-width: 18ch; margin-top: 16px; }
+.cta-text { margin-top: 18px; font-size: 1rem; max-width: 46ch; }
 .cta-email { margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
 .cta-email a { color: var(--ink); }
 .cta-link {
@@ -704,7 +703,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-family: var(--font-display);
   font-weight: 500;
   text-transform: uppercase;
-  font-size: clamp(3.2rem, 12vw, 11rem);
+  font-size: clamp(2.6rem, 7.5vw, 6.5rem);
   line-height: 0.9;
   transition: color .25s;
 }
