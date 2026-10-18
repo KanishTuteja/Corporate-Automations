@@ -2,6 +2,9 @@
    Editable values — change these and every link on the page updates.
    ========================================================================== */
 const CONFIG = {
+  BUSINESS_NAME: "Donely",
+  // GitHub Pages URL for now; swap in the real domain later (also update the static copies in index.html <head>)
+  SITE_URL: "https://kanishtuteja.github.io/Corporate-Automations/",
   BOOKING_URL: "https://calendly.com/kanishtuteja",
   EMAIL: "kanishtuteja@gmail.com",
   LINKEDIN_URL: "https://www.linkedin.com/in/kanishtuteja",
@@ -14,8 +17,8 @@ const CONFIG = {
    attribute there. TODO: have a native French speaker review before launch.
    ========================================================================== */
 const FR = {
-  "meta.title": "Kanish Tuteja | Automatisation IA et IA privée sur site pour les entreprises de Toronto",
-  "meta.desc": "Je conçois des automatisations, des agents IA et des outils internes pour les petites équipes de Toronto — y compris l’IA privée, sur site et hybride, pour que les équipes qui manipulent des données sensibles les gardent sur leurs propres serveurs. Réservez un audit d’automatisation gratuit.",
+  "meta.title": "Donely | Automatisation IA pour les petites entreprises de Toronto",
+  "meta.desc": "Donely conçoit des automatisations, des agents IA et des outils internes qui libèrent les petites équipes de Toronto des tâches administratives répétitives, avec une approbation humaine intégrée. Réservez un audit d’automatisation gratuit.",
   "skip": "Aller au contenu",
   "nav.services": "Services",
   "nav.how": "Comment ça marche",
@@ -220,6 +223,11 @@ const FR = {
     if (href) el.setAttribute("href", href);
   });
   document.querySelectorAll('[data-show="email"]').forEach((el) => { el.textContent = CONFIG.EMAIL; });
+  document.querySelectorAll('[data-show="business"]').forEach((el) => { el.textContent = CONFIG.BUSINESS_NAME; });
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", CONFIG.SITE_URL);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", CONFIG.SITE_URL);
   document.querySelectorAll('[data-show="linkedin"]').forEach((el) => {
     el.textContent = CONFIG.LINKEDIN_URL.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
   });
